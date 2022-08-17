@@ -1,6 +1,6 @@
 import * as React from "react"
 import type { HeadFC } from "gatsby"
-import * as S from '../css/main.styled'
+import * as S from '../styles/main.styled'
 
 const IndexPage = () => {
   return (
