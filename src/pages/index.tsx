@@ -4,11 +4,9 @@ import * as S from '../css/main.styled'
 
 const IndexPage = () => {
   return (
-    <S.PageStyles>
-      <main>
-        <span> 10.28.23</span>
-      </main>
-    </S.PageStyles>
+    <S.Container>
+      <S.Text>10.28.23</S.Text>
+    </S.Container>
   )
 }
 
