@@ -5,7 +5,7 @@ import * as S from '../css/main.styled'
 const IndexPage = () => {
   return (
     <S.PageStyles>
-      <main >
+      <main>
         <span> 10.28.23</span>
       </main>
     </S.PageStyles>
