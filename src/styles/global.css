@@ -1,3 +1,36 @@
 body {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+:root {
+  --offset: 7px;
+  --border-size: 1px;
+  --vertical-offset: calc(var(--offset) * -1);
+  --horizontal-offset: calc(var(--offset) * -1);
+}
+
+
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  30% {
+    stroke-dashoffset: 1550;
+  }
+
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    transform: scale(1);
+  }
+
+  100% {
+    stroke-dashoffset: 3100;
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

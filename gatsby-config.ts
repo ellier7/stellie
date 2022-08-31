@@ -1,4 +1,4 @@
-import type { GatsbyConfig } from "gatsby"
+import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -12,8 +12,7 @@ const config: GatsbyConfig = {
   plugins: [
     {
       resolve: `gatsby-plugin-styled-components`,
-      options: {
-      },
+      options: {},
     },
     {
       resolve: "gatsby-plugin-web-font-loader",
@@ -22,7 +21,8 @@ const config: GatsbyConfig = {
           id: process.env.TYPEKIT_ID,
         },
       },
-    },],
-}
+    },
+  ],
+};
 
-export default config
+export default config;
