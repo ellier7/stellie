@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import type { HeadFC } from "gatsby";
-import * as S from "../styles/main.styled";
+import Layout from "../components/Layout/Layout";
 import Preloader from "../components/Preloader/Preloader";
+import * as S from "../styles/main.styled";
 
 const IndexPage = () => {
   const [showPreloader, setShowPreloader] = useState(true);
@@ -12,17 +13,7 @@ const IndexPage = () => {
     }, 2700);
   }, []);
 
-  return (
-    <>
-      {showPreloader ? (
-        <Preloader />
-      ) : (
-        <S.Container>
-          <S.Text>10.28.23</S.Text>
-        </S.Container>
-      )}
-    </>
-  );
+  return <>{showPreloader ? <Preloader /> : <Layout />}</>;
 };
 
 export default IndexPage;
