@@ -5,13 +5,14 @@ export const Layout = styled.div`
   max-width: calc(100% - 4em);
   margin: 2em auto 0;
   animation: fadein 3s;
-  position: fixed;
+  position: relative;
+  /* position: fixed;
   background: #fff;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  text-align: center;
+  text-align: center; */
 `;
 
 export const Text = styled.div`

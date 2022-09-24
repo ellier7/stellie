@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import { Scrollspy } from "@makotot/ghostui";
 import Scroll from "../Scroll/Scroll";
 import * as S from "./Navigation.styled";
@@ -7,33 +7,60 @@ type NavigationProps = {
   sticky: boolean;
 };
 const Navigation = ({ sticky }: NavigationProps) => {
+  const [active, setActive] = useState("home");
+
+  const menuLinks = [
+    {
+      active: active === "home",
+      href: "#",
+      name: "Home",
+      onClick: () => setActive("home"),
+    },
+    {
+      active: active === "details",
+      href: "#",
+      name: "Details",
+      onClick: () => setActive("details"),
+    },
+    {
+      active: active === "accomodations",
+      href: "#",
+      name: "Accomodations",
+      onClick: () => setActive("accomodations"),
+    },
+    {
+      active: active === "registry",
+      href: "#",
+      name: "Registry",
+      onClick: () => setActive("registry"),
+    },
+  ];
+
   return (
     <S.Navigation id="nav" sticky={sticky}>
-      {/* <Scrollspy
+      <S.NavigationContainer>
+        {/* <Scrollspy
         items={['intro', 'first', 'second', 'cta']}
         currentClassName="is-active"
         offset={-300}
       > */}
-      <S.List>
-        <Scroll type="id" element="home">
-          <a href="#">Home</a>
-        </Scroll>
-      </S.List>
-      <S.List>
-        <Scroll type="id" element="details">
-          <a href="#">Details</a>
-        </Scroll>
-      </S.List>
-      <S.List>
-        <Scroll type="id" element="accomodations">
-          <a href="#">Accomodations</a>
-        </Scroll>
-      </S.List>
-      <S.List>
-        <Scroll type="id" element="registry">
-          <a href="#">Registry</a>
-        </Scroll>
-      </S.List>
+
+        {menuLinks.map((menu) => {
+          return (
+            <S.List key={menu.name}>
+              <Scroll type="id" element={menu.name}>
+                <S.Link
+                  active={menu.active}
+                  href={menu.href}
+                  onClick={menu.onClick}
+                >
+                  {menu.name}
+                </S.Link>
+              </Scroll>
+            </S.List>
+          );
+        })}
+      </S.NavigationContainer>
     </S.Navigation>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navigation from "../Navigation/Navigation";
 import { Waypoint } from "react-waypoint";
+import Hero from "../Hero/Hero";
 import * as S from "./Layout.styled";
 
 const Layout = () => {
@@ -21,6 +22,7 @@ const Layout = () => {
         onLeave={_handleWaypointLeave}
       ></Waypoint>
       <Navigation sticky={stickyNav} />
+      <Hero />
     </S.Layout>
   );
 };
