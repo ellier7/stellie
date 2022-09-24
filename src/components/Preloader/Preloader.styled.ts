@@ -13,7 +13,7 @@ export const Preloader = styled.div`
 
 export const PreloaderTitle = styled.div`
   font-size: 20pt;
-  color: #8eaeba;
+  color: #548565;
   line-height: 0.9;
   position: absolute;
   top: 45px;
@@ -22,7 +22,7 @@ export const PreloaderTitle = styled.div`
   font-family: "Playfair Display", serif;
 
   small {
-    color: #8eaeba;
+    color: #548565;
     line-height: 0.9;
     font-size: 12pt;
   }
@@ -30,7 +30,7 @@ export const PreloaderTitle = styled.div`
 
 export const LoadingHeart = styled.div`
   fill: transparent;
-  stroke: #8eaeba;
+  stroke: #548565;
   stroke-width: 11;
   position: absolute;
   top: 50%;

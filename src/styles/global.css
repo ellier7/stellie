@@ -1,5 +1,6 @@
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
+  font-family: "Playfair Display", serif;
 }
 
 :root {
@@ -9,6 +10,9 @@ body {
   --horizontal-offset: calc(var(--offset) * -1);
 }
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
 @keyframes stroke-animation {
   0% {
