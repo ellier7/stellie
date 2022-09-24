@@ -12,19 +12,22 @@ export const Preloader = styled.div`
 `;
 
 export const PreloaderTitle = styled.div`
+  display: flex;
+  flex-direction: column;
   font-size: 20pt;
   color: #548565;
-  line-height: 0.9;
+  line-height: 1;
   position: absolute;
-  top: 45px;
+  top: 43px;
   left: 50%;
   transform: translateX(-50%);
   font-family: "Playfair Display", serif;
 
   small {
     color: #548565;
-    line-height: 0.9;
-    font-size: 12pt;
+    line-height: 1;
+    font-size: 13pt;
+    margin: 8px 0;
   }
 `;
 

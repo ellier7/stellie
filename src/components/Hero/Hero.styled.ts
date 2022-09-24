@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import Pic from "../../assets/images/Ellie&Stelios_EngagementSession-58.jpg";
+import HeroImg from "../../assets/images/Ellie&Stelios_EngagementSession-22.jpg";
 import Stelio from "../../assets/images/Ellie&Stelios_EngagementSession-43.jpg";
 import Ellie from "../../assets/images/Ellie&Stelios_EngagementSession-118.jpg";
 
 export const Hero = styled.div`
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${Pic});
+    url(${HeroImg});
   height: calc(100vh - 30px);
   min-height: 600px;
   background-position: center;
@@ -89,10 +89,11 @@ export const Location = styled.a`
   font-family: "Pinyon Script", cursive;
   letter-spacing: 1.5px;
   margin-top: 5px;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
+  color: #ffffff;
 
   &:hover {
     color: #ffffff;
@@ -112,7 +113,22 @@ export const Portraits = styled.div`
   display: flex;
   padding: 0 80px;
   justify-content: space-between;
+  margin-top: 15px;
+  position: relative;
   /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+`;
+
+export const Content = styled.div`
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.8);
 `;
 
 export const StelioPortrait = styled.div`
@@ -125,6 +141,16 @@ export const StelioPortrait = styled.div`
   position: relative;
   background-color: transparent;
   display: flex;
+  transition: all 0.3s;
+
+  &:hover {
+    background-image: none;
+    box-shadow: none;
+
+    & ${Content} {
+      opacity: 1;
+    }
+  }
 `;
 
 export const ElliePortrait = styled.div`
@@ -138,6 +164,16 @@ export const ElliePortrait = styled.div`
   background-color: transparent;
   margin-left: 45px;
   display: flex;
+  transition: all 0.3s;
+
+  &:hover {
+    background-image: none;
+    box-shadow: none;
+
+    ${Content} {
+      opacity: 1;
+    }
+  }
 `;
 
 export const HeartsIcon = styled.div`
@@ -150,4 +186,21 @@ export const HeartsIcon = styled.div`
   background-color: #fff;
   border-radius: 50%;
   padding: 10px;
+`;
+
+export const FirstName = styled.div`
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  color: #548565;
+`;
+
+export const BrideGroom = styled.div`
+  color: #548565;
+  margin-bottom: 30px;
+`;
+
+export const Quote = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 0 60px;
 `;
