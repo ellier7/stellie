@@ -15,7 +15,7 @@ export const PreloaderTitle = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 20pt;
-  color: #548565;
+  color: var(--primary);
   line-height: 1;
   position: absolute;
   top: 43px;
@@ -24,7 +24,7 @@ export const PreloaderTitle = styled.div`
   font-family: "Playfair Display", serif;
 
   small {
-    color: #548565;
+    color: var(--primary);
     line-height: 1;
     font-size: 13pt;
     margin: 8px 0;
@@ -33,7 +33,7 @@ export const PreloaderTitle = styled.div`
 
 export const LoadingHeart = styled.div`
   fill: transparent;
-  stroke: #548565;
+  stroke: var(--primary);
   stroke-width: 11;
   position: absolute;
   top: 50%;
