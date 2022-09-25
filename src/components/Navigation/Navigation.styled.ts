@@ -4,7 +4,7 @@ export const Navigation = styled.nav<{ sticky: boolean }>`
   position: absolute;
   transition: background-color 0.2s ease, border-top-left-radius 0.2s ease,
     border-top-right-radius 0.2s ease, padding 0.2s ease;
-  background-color: #548565;
+  background-color: var(--primary);
   color: #ffffff;
   width: inherit;
   padding: 1em;
@@ -53,7 +53,7 @@ export const Link = styled.a<{ active: boolean }>`
   box-shadow: ${(props) =>
     props.active ? "none" : "inset 0 0 0 1px transparent"};
   background: ${(props) => (props.active ? "#ffffff" : "transparent")};
-  color: ${(props) => (props.active ? "#548565" : "inherit")};
+  color: ${(props) => (props.active ? "var(--primary)" : "inherit")};
   font-weight: ${(props) => (props.active ? "bold" : "normal")};
   transition: font-size 0.2s ease;
 

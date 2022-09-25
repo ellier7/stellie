@@ -7,7 +7,6 @@ export type CountdownProps = {
 const useCountdown = ({ targetDate }: CountdownProps) => {
   const countDownDate = new Date(targetDate).getTime();
 
-  console.log(targetDate);
   const [countDown, setCountDown] = useState(
     countDownDate - new Date().getTime()
   );

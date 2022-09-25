@@ -1,4 +1,5 @@
 import "@fontsource/allura";
+import "@fontsource/alex-brush";
 import "@fontsource/basic";
 import "@fontsource/galada";
 import "@fontsource/open-sans";
