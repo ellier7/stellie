@@ -6,6 +6,7 @@ export const TimelineWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 60px;
 `;
 
 export const OurStory = styled.div`
@@ -19,18 +20,12 @@ export const OurStory = styled.div`
 
 export const Timeline = styled.div`
   position: relative;
-  padding: 5em 0;
+  padding: 0 0 5em;
   margin-bottom: 8px;
   box-sizing: border-box;
 `;
 
-export const TimelineTopBottom = styled.div`
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 20;
-  margin-left: -7px;
-
+const TimeLineDot = styled.div`
   &:before {
     border-color: #f7f7f7;
     background: var(--primary);
@@ -47,6 +42,23 @@ export const TimelineTopBottom = styled.div`
   }
 `;
 
+export const TimelineTop = styled(TimeLineDot)`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 20;
+  margin-left: -7px;
+`;
+
+export const TimelineBottom = styled(TimeLineDot)`
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  left: 50%;
+  z-index: 20;
+  margin-left: -7px;
+`;
+
 export const ContentWrapper = styled.div`
   &:before {
     box-sizing: border-box;
@@ -56,7 +68,8 @@ export const ContentWrapper = styled.div`
     left: 50%;
     height: 100%;
     width: 4px;
-    background: #fff7f7;
+    background: var(--primary);
+    opacity: 0.3;
   }
 `;
 
@@ -65,7 +78,7 @@ export const TimelineItem = styled.div<{ float: string }>`
   clear: both;
   width: 50%;
   float: ${(props) => props.float};
-  margin-top: ${(props) => (props.float === "right" ? "100px" : 0)};
+  margin-top: 80px;
 `;
 
 export const TimelineContent = styled.div<{ float: string }>`
@@ -105,6 +118,11 @@ export const TimelineFigure = styled.figure`
     width: 100%;
     max-width: 100%;
     vertical-align: top;
+    transition: all 0.4s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 
@@ -139,23 +157,25 @@ export const TimelineText = styled.div<{ float: string }>`
   flex-direction: column;
   left: ${(props) => (props.float === "right" ? "-140%" : "140%")};
   text-align: ${(props) => (props.float === "right" ? "right" : "left")};
-  padding-left: ${(props) => (props.float === "right" ? "40px" : "0")};
-  padding-right: ${(props) => (props.float === "right" ? "0px" : "40px")};
+  padding-right: ${(props) => (props.float === "right" ? "40px" : "0")};
+  padding-left: ${(props) => (props.float === "right" ? "0px" : "40px")};
 
   & span:nth-child(1) {
     font-family: "Alex Brush", cursive;
-    font-size: 30px;
+    font-size: 38px;
+    line-height: 1;
   }
 
   & span:nth-child(2) {
     display: block;
     margin-bottom: 20px;
-    font-size: 13px;
+    font-size: 18px;
+    line-height: 1;
     color: var(--primary);
   }
 
   & span:nth-child(3) {
-    font-size: 12px;
+    font-size: 14px;
     opacity: 0.8;
   }
 `;
