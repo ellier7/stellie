@@ -17,8 +17,14 @@ const Navigation = ({ sticky }: NavigationProps) => {
       onClick: () => setActive("home"),
     },
     {
+      active: active === "ourstory",
+      href: "#ourstory",
+      name: "Our Story",
+      onClick: () => setActive("ourstory"),
+    },
+    {
       active: active === "details",
-      href: "#",
+      href: "#ourstory",
       name: "Details",
       onClick: () => setActive("details"),
     },
