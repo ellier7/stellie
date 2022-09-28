@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-// import { Scrollspy } from "@makotot/ghostui";
+import React, { useState } from "react";
 import Scroll from "../Scroll/Scroll";
 import * as S from "./Navigation.styled";
 
@@ -12,31 +11,31 @@ const Navigation = ({ sticky }: NavigationProps) => {
   const menuLinks = [
     {
       active: active === "home",
-      href: "#",
+      href: "/#home",
       name: "Home",
       onClick: () => setActive("home"),
     },
     {
       active: active === "ourstory",
-      href: "#ourstory",
+      href: "/#timeline",
       name: "Our Story",
       onClick: () => setActive("ourstory"),
     },
     {
       active: active === "details",
-      href: "#ourstory",
+      href: "/#details",
       name: "Details",
       onClick: () => setActive("details"),
     },
     {
       active: active === "accomodations",
-      href: "#",
+      href: "/#home",
       name: "Accomodations",
       onClick: () => setActive("accomodations"),
     },
     {
       active: active === "registry",
-      href: "#",
+      href: "/#home",
       name: "Registry",
       onClick: () => setActive("registry"),
     },
@@ -53,17 +52,20 @@ const Navigation = ({ sticky }: NavigationProps) => {
 
         {menuLinks.map((menu) => {
           return (
-            <S.List key={menu.name}>
-              <Scroll type="id" element={menu.name}>
-                <S.Link
-                  active={menu.active}
-                  href={menu.href}
-                  onClick={menu.onClick}
-                >
+            <S.Link
+              to={menu.href}
+              title={menu.name}
+              key={menu.name}
+              active={menu.active}
+            >
+              <S.List>
+                <Scroll type="id" element={menu.name}>
+                  {/* <S.Link active={menu.active} href="" onClick={menu.onClick}> */}
                   {menu.name}
-                </S.Link>
-              </Scroll>
-            </S.List>
+                  {/* </S.Link> */}
+                </Scroll>
+              </S.List>
+            </S.Link>
           );
         })}
       </S.NavigationContainer>

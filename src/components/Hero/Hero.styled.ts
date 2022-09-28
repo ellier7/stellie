@@ -4,7 +4,7 @@ import HeroImg from "../../assets/images/Ellie&Stelios_EngagementSession-22.jpg"
 export const Hero = styled.div`
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(${HeroImg});
-  height: calc(100vh - 30px);
+  height: 100vh;
   min-height: 600px;
   background-position: center;
   background-repeat: no-repeat;

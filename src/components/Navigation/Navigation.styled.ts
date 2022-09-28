@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 export const Navigation = styled.nav<{ sticky: boolean }>`
   position: absolute;
@@ -41,7 +42,7 @@ export const NavigationContainer = styled.div`
   margin: auto;
 `;
 
-export const Link = styled.a<{ active: boolean }>`
+export const Link = styled(AnchorLink)<{ active: boolean }>`
   text-decoration: none;
   transition: font-size 0.2s ease;
   display: inline-block;

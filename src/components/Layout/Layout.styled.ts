@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 export const Layout = styled.div`
-  width: 64em;
-  max-width: calc(100% - 4em);
-  margin: 2em auto 0;
+  width: 100vw;
   animation: fadein 3s;
   position: relative;
   /* position: fixed;
