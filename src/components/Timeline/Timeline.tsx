@@ -3,10 +3,10 @@ import TimelineIcon1 from "../../assets/images/timeline-icon1.svg";
 import TimelineIcon2 from "../../assets/images/timeline-icon2.svg";
 import TimelineIcon3 from "../../assets/images/timeline-icon3.svg";
 import TimelineIcon4 from "../../assets/images/timeline-icon4.svg";
-import Timeline1 from "../../assets/images/Ellie&Stelios_EngagementSession-67.jpg";
-import Timeline2 from "../../assets/images/Ellie&Stelios_EngagementSession-46.jpg";
-import Timeline3 from "../../assets/images/Ellie&Stelios_EngagementSession-136.jpg";
-import Timeline4 from "../../assets/images/Ellie&Stelios_EngagementSession-89.jpg";
+import TimelinePic1 from "../../assets/images/Ellie&Stelios_EngagementSession-67.jpg";
+import TimelinePic2 from "../../assets/images/Ellie&Stelios_EngagementSession-46.jpg";
+import TimelinePic3 from "../../assets/images/Ellie&Stelios_EngagementSession-136.jpg";
+import TimelinePic4 from "../../assets/images/Ellie&Stelios_EngagementSession-89.jpg";
 import * as S from "./Timeline.styled";
 
 const Timeline = () => {
@@ -16,7 +16,7 @@ const Timeline = () => {
       float: "left",
       icon: TimelineIcon1,
       iconHeight: "48px",
-      image: Timeline1,
+      image: TimelinePic1,
       header: "it's a match!",
       date: "03/25/20",
       text: '"Stelio lost his independence on the day Greece gain it."',
@@ -27,7 +27,7 @@ const Timeline = () => {
       float: "right",
       icon: TimelineIcon2,
       iconHeight: "35px",
-      image: Timeline2,
+      image: TimelinePic2,
       header: "our first date",
       date: "05/09/20",
       text: "At the height of the Covid lockdown, we went for a walk at the Staten Island boardwalk. Stelio packed a bag with wine and snacks and we talked for hours!",
@@ -38,7 +38,7 @@ const Timeline = () => {
       float: "left",
       icon: TimelineIcon3,
       iconHeight: "44px",
-      image: Timeline3,
+      image: TimelinePic3,
       header: "he asked, she said yes!",
       date: "03/19/22",
       text: "Isabella Stewart Gardner Museum. Ellie was so shocked (and hysterically crying) and couldn't respond until Stelio said 'this is when you say yes!!'",
@@ -49,7 +49,7 @@ const Timeline = () => {
       float: "right",
       icon: TimelineIcon4,
       iconHeight: "44px",
-      image: Timeline4,
+      image: TimelinePic4,
       header: "our wedding day",
       date: "10/28/23",
       text: "#sayingYesOnOxiDay",
@@ -57,8 +57,8 @@ const Timeline = () => {
     },
   ];
   return (
-    <S.TimelineWrapper>
-      <S.OurStory id="ourstory">Our Story</S.OurStory>
+    <S.TimelineWrapper id="timeline">
+      <S.OurStory>Our Story</S.OurStory>
       <S.Timeline>
         <S.TimelineTop></S.TimelineTop>
         <S.ContentWrapper>

@@ -4,7 +4,7 @@ import * as S from "./Hero.styled";
 const Hero = () => {
   return (
     <>
-      <S.Hero>
+      <S.Hero id="home">
         <S.HeroText>
           <S.Names>Stelio & Ellie</S.Names>
           <S.HeroDate>

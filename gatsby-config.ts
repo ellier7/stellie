@@ -22,6 +22,7 @@ const config: GatsbyConfig = {
         },
       },
     },
+    `gatsby-plugin-anchor-links`,
   ],
 };
 
