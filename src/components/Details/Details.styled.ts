@@ -8,25 +8,38 @@ export const Details = styled.div`
 `;
 
 export const DetailsContainer = styled.div`
-  margin: 30px auto;
+  margin: 50px auto 30px;
+  width: 70em;
   max-width: calc(100% - 4em);
-  width: 90vw;
   display: flex;
   justify-content: space-between;
 
   div {
     flex: 0 0 auto;
+    padding: 0 15px;
     width: 33.333%;
     display: flex;
     flex-direction: column;
-    font-size: 30px;
 
     &:not(:last-child) {
       border-right: 1px solid grey;
     }
+  }
 
-    & p:first-child {
-      margin: 20px 0 0;
+  @media (max-width: 920px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+
+    div {
+      width: 100%;
+    }
+
+    div:not(:last-child) {
+      border-right: none;
+      border-bottom: 1px solid grey;
+      margin: 0px 0 30px;
+      padding-bottom: 30px;
     }
   }
 `;
@@ -37,9 +50,19 @@ export const DetailsHeader = styled.span`
   font-size: 50px;
 `;
 
+export const DetailType = styled.p`
+  font-size: 30px;
+`;
+
+export const DetailTime = styled.span`
+  font-family: "Open Sans";
+  font-size: 25px;
+`;
+
 export const DetailInfo = styled.p`
   margin: 30px 0 0;
   font-size: 20px;
+  line-height: 23px;
 `;
 
 export const DetailAddress = styled.p`

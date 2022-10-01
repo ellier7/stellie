@@ -1,4 +1,5 @@
 import React from "react";
+import Arrow from "../../assets/images/arrow-right.svg";
 import TimelineIcon1 from "../../assets/images/timeline-icon1.svg";
 import TimelineIcon2 from "../../assets/images/timeline-icon2.svg";
 import TimelineIcon3 from "../../assets/images/timeline-icon3.svg";
@@ -89,6 +90,10 @@ const Timeline = () => {
         </S.ContentWrapper>
         <S.TimelineBottom></S.TimelineBottom>
       </S.Timeline>
+
+      <S.Gallery>
+        Our Gallery <img src={Arrow} />
+      </S.Gallery>
     </S.TimelineWrapper>
   );
 };

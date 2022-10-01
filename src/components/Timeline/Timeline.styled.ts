@@ -179,3 +179,28 @@ export const TimelineText = styled.div<{ float: string }>`
     opacity: 0.8;
   }
 `;
+
+export const Gallery = styled.button`
+  width: auto;
+  margin: 50px auto 0;
+  background: #fff;
+  font-size: 18px;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  outline: none;
+  padding: 9px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Playfair Display", serif;
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-left: 5px;
+  }
+
+  :hover {
+    background: var(--primary);
+    color: #fff;
+  }
+`;
