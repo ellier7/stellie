@@ -13,6 +13,10 @@ body {
   --primary: #548565;
 }
 
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }

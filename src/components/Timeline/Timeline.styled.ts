@@ -180,6 +180,8 @@ export const TimelineText = styled.div<{ float: string }>`
   }
 `;
 
+export const GalleryLink = styled.a``;
+
 export const Gallery = styled.button`
   width: auto;
   margin: 50px auto 0;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 export const Navigation = styled.nav<{ sticky: boolean }>`
@@ -42,7 +43,7 @@ export const NavigationContainer = styled.div`
   margin: auto;
 `;
 
-export const Link = styled(AnchorLink)<{ active: boolean }>`
+export const NavLink = styled(Link)<{ active: string }>`
   text-decoration: none;
   transition: font-size 0.2s ease;
   display: inline-block;
@@ -52,15 +53,39 @@ export const Link = styled(AnchorLink)<{ active: boolean }>`
   border: 0;
   border-radius: 8px;
   box-shadow: ${(props) =>
-    props.active ? "none" : "inset 0 0 0 1px transparent"};
-  background: ${(props) => (props.active ? "#ffffff" : "transparent")};
-  color: ${(props) => (props.active ? "var(--primary)" : "inherit")};
-  font-weight: ${(props) => (props.active ? "bold" : "normal")};
+    props.active === "true" ? "none" : "inset 0 0 0 1px transparent"};
+  background: ${(props) =>
+    props.active === "true" ? "#ffffff" : "transparent"};
+  color: ${(props) => (props.active === "true" ? "var(--primary)" : "inherit")};
+  font-weight: ${(props) => (props.active === "true" ? "bold" : "normal")};
   transition: font-size 0.2s ease;
 
   &:hover {
     background: ${(props) =>
-      props.active ? "#ffffff" : "rgba(255, 255, 255, 0.3)"};
+      props.active === "true" ? "#ffffff" : "rgba(255, 255, 255, 0.3)"};
+  }
+`;
+
+export const CustomAnchorLink = styled(AnchorLink)<{ active: string }>`
+  text-decoration: none;
+  transition: font-size 0.2s ease;
+  display: inline-block;
+  height: 2.25em;
+  line-height: 2.25em;
+  padding: 0 1.25em;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: ${(props) =>
+    props.active === "true" ? "none" : "inset 0 0 0 1px transparent"};
+  background: ${(props) =>
+    props.active === "true" ? "#ffffff" : "transparent"};
+  color: ${(props) => (props.active === "true" ? "var(--primary)" : "inherit")};
+  font-weight: ${(props) => (props.active === "true" ? "bold" : "normal")};
+  transition: font-size 0.2s ease;
+
+  &:hover {
+    background: ${(props) =>
+      props.active === "true" ? "#ffffff" : "rgba(255, 255, 255, 0.3)"};
   }
 `;
 

@@ -6,14 +6,16 @@ import * as S from "../styles/main.styled";
 
 const IndexPage = () => {
   const [showPreloader, setShowPreloader] = useState(true);
+  const loaded = localStorage.getItem("preloader");
 
   useEffect(() => {
     setTimeout(() => {
       setShowPreloader(false);
+      localStorage.setItem("preloader", "true");
     }, 2700);
   }, []);
 
-  return <>{showPreloader ? <Preloader /> : <Layout />}</>;
+  return <>{showPreloader && !loaded ? <Preloader /> : <Layout />}</>;
 };
 
 export default IndexPage;

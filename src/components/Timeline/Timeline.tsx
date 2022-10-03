@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "gatsby";
 import Arrow from "../../assets/images/arrow-right.svg";
+import ArrowWhite from "../../assets/images/arrow-right_white.svg";
 import TimelineIcon1 from "../../assets/images/timeline-icon1.svg";
 import TimelineIcon2 from "../../assets/images/timeline-icon2.svg";
 import TimelineIcon3 from "../../assets/images/timeline-icon3.svg";
@@ -57,6 +59,9 @@ const Timeline = () => {
       order: "even",
     },
   ];
+
+  const [hover, setOnHover] = useState(false);
+
   return (
     <S.TimelineWrapper id="timeline">
       <S.OurStory>Our Story</S.OurStory>
@@ -90,10 +95,19 @@ const Timeline = () => {
         </S.ContentWrapper>
         <S.TimelineBottom></S.TimelineBottom>
       </S.Timeline>
-
-      <S.Gallery>
-        Our Gallery <img src={Arrow} />
-      </S.Gallery>
+      <Link to="/gallery">
+        <S.Gallery
+          onMouseEnter={() => setOnHover(!hover)}
+          onMouseLeave={() => setOnHover(!hover)}
+        >
+          Our Gallery
+          {hover ? (
+            <img src={ArrowWhite} height="18px" />
+          ) : (
+            <img src={Arrow} height="18px" />
+          )}
+        </S.Gallery>
+      </Link>
     </S.TimelineWrapper>
   );
 };
