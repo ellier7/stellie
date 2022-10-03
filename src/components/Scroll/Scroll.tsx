@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-import smoothscroll from "smoothscroll-polyfill";
 import * as S from "./Scroll.styled";
 
 type ScrollProps = {
@@ -8,6 +7,7 @@ type ScrollProps = {
   children: ReactNode;
 };
 const Scroll = ({ type, element, children }: ScrollProps) => {
+  console.log("children", children);
   return <S.Scroll>{children}</S.Scroll>;
 };
 
