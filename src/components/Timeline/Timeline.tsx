@@ -95,6 +95,14 @@ const Timeline = () => {
         </S.ContentWrapper>
         <S.TimelineBottom></S.TimelineBottom>
       </S.Timeline>
+      <S.ForeverBegins>
+        THIS IS WHERE OUR <br />
+        <div>
+          FOREVER
+          <br />
+          BEGINS!
+        </div>
+      </S.ForeverBegins>
       <Link to="/gallery">
         <S.Gallery
           onMouseEnter={() => setOnHover(!hover)}

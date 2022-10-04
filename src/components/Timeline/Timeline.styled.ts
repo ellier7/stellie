@@ -180,11 +180,24 @@ export const TimelineText = styled.div<{ float: string }>`
   }
 `;
 
+export const ForeverBegins = styled.div`
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  font-weight: bold;
+
+  div {
+    font-size: 50px;
+    line-height: 0.9;
+    color: var(--primary);
+  }
+`;
 export const GalleryLink = styled.a``;
 
 export const Gallery = styled.button`
   width: auto;
-  margin: 50px auto 0;
+  margin: 60px auto 0;
   background: #fff;
   font-size: 18px;
   color: var(--primary);
