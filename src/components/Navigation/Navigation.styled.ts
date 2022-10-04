@@ -52,17 +52,14 @@ export const NavLink = styled(Link)<{ active: string }>`
   padding: 0 1.25em;
   border: 0;
   border-radius: 8px;
-  box-shadow: ${(props) =>
-    props.active === "true" ? "none" : "inset 0 0 0 1px transparent"};
-  background: ${(props) =>
-    props.active === "true" ? "#ffffff" : "transparent"};
-  color: ${(props) => (props.active === "true" ? "var(--primary)" : "inherit")};
+  box-shadow: inset 0 0 0 1px transparent;
+  background: transparent;
+  color: #fff;
   font-weight: ${(props) => (props.active === "true" ? "bold" : "normal")};
   transition: font-size 0.2s ease;
 
   &:hover {
-    background: ${(props) =>
-      props.active === "true" ? "#ffffff" : "rgba(255, 255, 255, 0.3)"};
+    background: rgba(255, 255, 255, 0.3);
   }
 `;
 
@@ -75,17 +72,14 @@ export const CustomAnchorLink = styled(AnchorLink)<{ active: string }>`
   padding: 0 1.25em;
   border: 0;
   border-radius: 8px;
-  box-shadow: ${(props) =>
-    props.active === "true" ? "none" : "inset 0 0 0 1px transparent"};
-  background: ${(props) =>
-    props.active === "true" ? "#ffffff" : "transparent"};
-  color: ${(props) => (props.active === "true" ? "var(--primary)" : "inherit")};
+  box-shadow: inset 0 0 0 1px transparent;
+  background: transparent;
+  color: #fff;
   font-weight: ${(props) => (props.active === "true" ? "bold" : "normal")};
   transition: font-size 0.2s ease;
 
   &:hover {
-    background: ${(props) =>
-      props.active === "true" ? "#ffffff" : "rgba(255, 255, 255, 0.3)"};
+    background: rgba(255, 255, 255, 0.3);
   }
 `;
 

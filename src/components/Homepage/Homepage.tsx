@@ -1,5 +1,5 @@
 import React from "react";
-import Accodomations from "../Accodomations/Accodomations";
+import Accomodations from "../Accomodations/Accomodations";
 import Countdown from "../Countdown/Countdown";
 import Details from "../Details/Details";
 import Hero from "../Hero/Hero";
@@ -19,7 +19,7 @@ const Homepage = () => {
         <Timeline />
       </S.MaxWidth>
       <Details />
-      <Accodomations />
+      <Accomodations />
     </>
   );
 };
