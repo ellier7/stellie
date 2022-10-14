@@ -30,6 +30,7 @@ export const AccomodationsType = styled.a`
   margin: 30px 0 20px;
   color: #000;
   text-decoration: none;
+  cursor: pointer !important;
 
   &:hover {
     text-decoration: underline;

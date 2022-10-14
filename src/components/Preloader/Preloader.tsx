@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import * as S from "./Preloader.styled";
 
 const Preloader = () => {

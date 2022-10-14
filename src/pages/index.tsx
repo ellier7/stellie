@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import type { HeadFC } from "gatsby";
-import Layout from "../components/Layout/Layout";
+import Homepage from "../components/Homepage/Homepage";
 import Preloader from "../components/Preloader/Preloader";
 import * as S from "../styles/main.styled";
 
@@ -15,7 +15,7 @@ const IndexPage = () => {
     }, 2700);
   }, []);
 
-  return <>{showPreloader && !loaded ? <Preloader /> : <Layout />}</>;
+  return <>{showPreloader && !loaded ? <Preloader /> : <Homepage />}</>;
 };
 
 export default IndexPage;
