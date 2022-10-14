@@ -20,7 +20,7 @@ const Navigation = ({ sticky }: NavigationProps) => {
   const menuLinks = [
     {
       active: active === "home",
-      href: "/#home",
+      href: "/",
       name: "Home",
       onClick: () => setActive("home"),
       type: "anchorLink",

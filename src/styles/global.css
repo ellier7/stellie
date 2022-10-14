@@ -15,6 +15,7 @@ body {
 
 a:-webkit-any-link {
   text-decoration: none;
+  cursor: pointer;
 }
 
 *, *:before, *:after {

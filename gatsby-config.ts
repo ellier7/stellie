@@ -24,6 +24,9 @@ const config: GatsbyConfig = {
     },
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-anchor-links`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };
 

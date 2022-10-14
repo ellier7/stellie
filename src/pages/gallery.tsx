@@ -1,8 +1,15 @@
 import React from "react";
-// import * as S from "../styles/main.styled";
+import Engagement from "../components/Gallery/Engagement";
+import Layout from "../components/Layout/Layout";
+import Proposal from "../components/Gallery/Proposal";
 
 const GalleryPage = () => {
-  return <div> Gallery </div>;
+  return (
+    <Layout>
+      <Proposal />
+      <Engagement />
+    </Layout>
+  );
 };
 
 export default GalleryPage;

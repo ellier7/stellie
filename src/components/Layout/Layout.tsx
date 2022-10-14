@@ -4,7 +4,7 @@ import { Waypoint } from "react-waypoint";
 import Homepage from "../Homepage/Homepage";
 import * as S from "./Layout.styled";
 
-const Layout = () => {
+const Layout = ({ children }: any) => {
   const [stickyNav, setStickyNav] = useState(false);
 
   function _handleWaypointEnter() {
@@ -22,7 +22,7 @@ const Layout = () => {
         onLeave={_handleWaypointLeave}
       ></Waypoint>
       <Navigation sticky={stickyNav} />
-      <Homepage />
+      {children}
     </S.Layout>
   );
 };
