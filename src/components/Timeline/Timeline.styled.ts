@@ -48,6 +48,10 @@ export const TimelineTop = styled(TimeLineDot)`
   left: 50%;
   z-index: 20;
   margin-left: -7px;
+
+  @media only screen and (max-width: 600px) {
+    left: 3%;
+  }
 `;
 
 export const TimelineBottom = styled(TimeLineDot)`
@@ -57,6 +61,10 @@ export const TimelineBottom = styled(TimeLineDot)`
   left: 50%;
   z-index: 20;
   margin-left: -7px;
+
+  @media only screen and (max-width: 600px) {
+    left: 3%;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -71,6 +79,12 @@ export const ContentWrapper = styled.div`
     background: var(--primary);
     opacity: 0.3;
   }
+
+  @media only screen and (max-width: 600px) {
+    &:before {
+      left: 3%;
+    }
+  }
 `;
 
 export const TimelineItem = styled.div<{ float: string }>`
@@ -79,6 +93,11 @@ export const TimelineItem = styled.div<{ float: string }>`
   width: 50%;
   float: ${(props) => props.float};
   margin-top: 80px;
+
+  @media only screen and (max-width: 600px) {
+    float: right;
+    width: 80%;
+  }
 `;
 
 export const TimelineContent = styled.div<{ float: string }>`
@@ -89,6 +108,11 @@ export const TimelineContent = styled.div<{ float: string }>`
   padding: 0;
   border: 0;
   margin-left: ${(props) => (props.float === "right" ? "20%" : 0)};
+
+  @media only screen and (max-width: 600px) {
+    width: 60vw;
+    margin-left: 0;
+  }
 `;
 
 export const TimelineImageWrapper = styled.div`
@@ -143,12 +167,21 @@ export const ContentIcon = styled.div<{ order: string }>`
   justify-content: center;
   right: ${(props) => (props.order === "even" ? "auto" : "-35px")};
   left: ${(props) => (props.order === "even" ? "0" : "null")};
+
+  @media only screen and (max-width: 600px) {
+    left: -17%;
+    width: 50px;
+    height: 50px;
+
+    img {
+      height: 27px;
+    }
+  }
 `;
 
 export const TimelineText = styled.div<{ float: string }>`
   position: absolute;
   top: 50%;
-
   transform: translateY(-50%);
   width: 100%;
   padding-left: 40px;
@@ -163,11 +196,12 @@ export const TimelineText = styled.div<{ float: string }>`
   & span:nth-child(1) {
     font-family: "Alex Brush", cursive;
     font-size: 38px;
-    line-height: 1;
+    line-height: 0.7;
   }
 
   & span:nth-child(2) {
     display: block;
+    margin-top: 10px;
     margin-bottom: 20px;
     font-size: 18px;
     line-height: 1;
@@ -177,6 +211,21 @@ export const TimelineText = styled.div<{ float: string }>`
   & span:nth-child(3) {
     font-size: 14px;
     opacity: 0.8;
+  }
+
+  @media only screen and (max-width: 600px) {
+    position: relative;
+    top: 0;
+    transform: none;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    text-align: left;
+
+    margin-top: 20px;
   }
 `;
 

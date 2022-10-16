@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Stelio from "../../assets/images/Ellie&Stelios_EngagementSession-43.jpg";
-import Ellie from "../../assets/images/Ellie&Stelios_EngagementSession-119.jpg";
+import Stelio from "../../assets/images/portraits/Ellie&Stelios_EngagementSession-43.jpg";
+import Ellie from "../../assets/images/portraits/Ellie&Stelios_EngagementSession-119.jpg";
 
 export const Border = styled.div`
   width: 100%;
@@ -9,10 +9,15 @@ export const Border = styled.div`
 
 export const Portraits = styled.div`
   display: flex;
-  padding: 0 80px;
+  max-width: 54em;
   justify-content: space-between;
-  margin: 15px 0;
+  margin: 15px auto;
   position: relative;
+
+  @media only screen and (max-width: 700px) {
+    flex-direction: column-reverse;
+    max-width: 400px;
+  }
 `;
 
 export const Content = styled.div`
@@ -53,11 +58,20 @@ const PortraitContatiner = styled.div`
 export const StelioPortrait = styled(PortraitContatiner)`
   background-image: url(${Stelio});
   margin-right: 20px;
+
+  @media only screen and (max-width: 700px) {
+    margin-right: 0px;
+  }
 `;
 
 export const ElliePortrait = styled(PortraitContatiner)`
   background-image: url(${Ellie});
   margin-left: 20px;
+
+  @media only screen and (max-width: 700px) {
+    margin-bottom: 50px;
+    margin-left: 0px;
+  }
 `;
 
 export const HeartsIcon = styled.div`

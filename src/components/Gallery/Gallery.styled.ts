@@ -5,7 +5,14 @@ export const Gallery = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 0 100px;
+  margin: 0 20px 100px;
+
+  @media (max-width: 400px) {
+    & img {
+      max-width: calc(100vw - 40px);
+      height: 100%;
+    }
+  }
 `;
 
 export const HeroImage = styled.div`

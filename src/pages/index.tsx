@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import type { HeadFC } from "gatsby";
 import Homepage from "../components/Homepage/Homepage";
 import Preloader from "../components/Preloader/Preloader";
-import * as S from "../styles/main.styled";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 const IndexPage = () => {
   const [showPreloader, setShowPreloader] = useState(true);
@@ -13,6 +13,8 @@ const IndexPage = () => {
       setShowPreloader(false);
       localStorage.setItem("preloader", "true");
     }, 2700);
+
+    scrollTo("#home");
   }, []);
 
   return <>{showPreloader && !loaded ? <Preloader /> : <Homepage />}</>;

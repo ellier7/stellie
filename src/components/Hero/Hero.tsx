@@ -18,7 +18,6 @@ const Hero = () => {
             rel="noreferrer"
           >
             Park Chateau
-            {/* <img src={ParkChateau} alt="Park Chateau" width="200px" /> */}
           </S.Location>
         </S.HeroText>
       </S.Hero>
