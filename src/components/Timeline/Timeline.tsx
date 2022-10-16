@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import Arrow from "../../assets/images/arrow-right.svg";
 import ArrowWhite from "../../assets/images/arrow-right_white.svg";
-import TimelineIcon1 from "../../assets/images/timeline-icon1.svg";
-import TimelineIcon2 from "../../assets/images/timeline-icon2.svg";
-import TimelineIcon3 from "../../assets/images/timeline-icon3.svg";
-import TimelineIcon4 from "../../assets/images/timeline-icon4.svg";
-import TimelinePic1 from "../../assets/images/Ellie&Stelios_EngagementSession-67.jpg";
-import TimelinePic2 from "../../assets/images/Ellie&Stelios_EngagementSession-46.jpg";
-import TimelinePic3 from "../../assets/images/Ellie&Stelios_EngagementSession-136.jpg";
-import TimelinePic4 from "../../assets/images/Ellie&Stelios_EngagementSession-89.jpg";
+import TimelineIcon1 from "../../assets/images/timeline/timeline-icon1.svg";
+import TimelineIcon2 from "../../assets/images/timeline/timeline-icon2.svg";
+import TimelineIcon3 from "../../assets/images/timeline/timeline-icon3.svg";
+import TimelineIcon4 from "../../assets/images/timeline/timeline-icon4.svg";
+import TimelinePic1 from "../../assets/images/timeline/Ellie&Stelios_EngagementSession-67.jpg";
+import TimelinePic2 from "../../assets/images/timeline/Ellie&Stelios_EngagementSession-46.jpg";
+import TimelinePic3 from "../../assets/images/timeline/Ellie&Stelios_EngagementSession-136.jpg";
+import TimelinePic4 from "../../assets/images/timeline/Ellie&Stelios_EngagementSession-89.jpg";
 import * as S from "./Timeline.styled";
 
 const Timeline = () => {

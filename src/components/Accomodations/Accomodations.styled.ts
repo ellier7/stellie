@@ -4,6 +4,10 @@ export const Accomodations = styled.div`
   width: 100%;
   padding: 50px;
   text-align: center;
+
+  @media only screen and (max-width: 600px) {
+    padding: 30px;
+  }
 `;
 
 export const AccomodationsContainer = styled.div`
@@ -14,7 +18,9 @@ export const AccomodationsContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 920px) {
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    max-width: 100%;
   }
 `;
 
@@ -38,10 +44,29 @@ export const AccomodationsType = styled.a`
   }
 `;
 
+export const AccomodationsTypeSmall = styled.a`
+  font-weight: bold;
+  margin-top: 18px;
+  font-size: 22px;
+  color: #000;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+
+  &:hover {
+    color: var(--primary);
+  }
+`;
+
 export const AccomodationsDetails = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media only screen and (max-width: 700px) {
+    img {
+      max-width: 100%;
+    }
+  }
 `;
 
 export const AccomodationsAddress = styled.p`
@@ -50,16 +75,16 @@ export const AccomodationsAddress = styled.p`
   font-size: 22px;
 `;
 
-export const AccomodationCode = styled.p`
+export const AccomodationCode = styled.div`
   margin: 35px 0 0;
   font-style: italic;
   font-size: 25px;
   font-weight: 700;
 
   & div {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.2;
-    max-width: 335px;
+    max-width: 385px;
     margin-top: 10px;
   }
 `;

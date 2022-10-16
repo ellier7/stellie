@@ -1,5 +1,5 @@
 import React from "react";
-import Hearts from "../../assets/images/two-hearts.svg";
+import Hearts from "../../assets/images/portraits/two-hearts.svg";
 import * as S from "./Portraits.styled";
 
 const Portraits = () => {
@@ -14,8 +14,8 @@ const Portraits = () => {
             <S.BrideGroom>THE GROOM</S.BrideGroom>
             <br />
             <S.Quote>
-              I am so incredibly lucky and excited to spend everyday for the
-              rest of my life with my best friend!
+              I am so incredibly lucky and excited to spend the rest of my life
+              with my best friend!
             </S.Quote>
           </S.Content>
         </S.StelioPortrait>
@@ -30,8 +30,8 @@ const Portraits = () => {
             <S.BrideGroom>THE BRIDE</S.BrideGroom>
             <br />
             <S.Quote>
-              She's everything I've always dreamed of and I'm so excited to
-              spend the rest of my life with her!
+              She's everything I've always dreamed of and I can't wait to spend
+              the rest of my life with her!
             </S.Quote>
           </S.Content>
         </S.ElliePortrait>

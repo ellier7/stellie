@@ -24,9 +24,16 @@ const Accomodations = () => {
             GROUP CODE: ROUANA <br />
             <div>
               *When booking a room, select SPECIAL RATES and then select GROUP
-              CODE from the drop down menu. Input code "ROUANA".
+              CODE from the drop down menu. Input code ROUANA.
             </div>
           </S.AccomodationCode>
+
+          <S.AccomodationsTypeSmall
+            href="https://be.synxis.com/?action=get_synxis_url&adult=1&arrive=2023-10-28&chain=27644&child=0&currency=USD&depart=2023-10-29&group=ROUANA&hotel=32973&level=hotel&locale=en-US&rooms=1&submit=CHECK%20AVAILABILITY"
+            target="_blank"
+          >
+            Book a room now!
+          </S.AccomodationsTypeSmall>
           <S.RecoveryBreakfast>
             <span>
               {" "}

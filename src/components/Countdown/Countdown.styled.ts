@@ -3,16 +3,13 @@ import styled from "styled-components";
 export const CountdownContainer = styled.div`
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: 265px) {
+    display: none;
+  }
 `;
 
 export const Countdown = styled.div`
-  // display: inline-block;
-  // background: rgba(84, 133, 101, .65);
-  // padding: 10px;
-  // position: absolute;
-  // left: 33%;
-  // bottom: -34px;
-  // border-top: 3px solid white;
   border-top: 4px solid #fff;
   background: rgba(84, 133, 101, 0.65);
   padding: 10px;
@@ -35,11 +32,21 @@ export const Countdown = styled.div`
   .value {
     color: white;
     font-size: 35px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
 
-  > span {
-    font-size: 12px;
+  & span {
+    font-size: 15px;
     color: white;
+  }
+
+  @media only screen and (max-width: 500px) {
+    .value {
+      font-size: 20px;
+    }
+
+    > div {
+      padding: 0 10px;
+    }
   }
 `;

@@ -22,16 +22,16 @@ const Proposal = () => {
         <img alt="alt" src={Pic01} width="400" loading="eager" />
       </S.HeroImage>
       <S.GalleryContainer>
-        <img alt="alt" src={Pic02} loading="eager" height="450" />
-        <img alt="alt" src={Pic03} loading="eager" height="450" />
-        <img alt="alt" src={Pic04} loading="eager" height="450" />
-        <img alt="alt" src={Pic08} loading="eager" height="450" />
-        <img alt="alt" src={Pic06} loading="eager" height="450" />
-        <img alt="alt" src={Pic07} loading="eager" height="450" />
-        <img alt="alt" src={Pic05} loading="eager" height="450" />
-        <img alt="alt" src={Pic09} loading="eager" height="450" />
-        <img alt="alt" src={Pic10} loading="eager" height="450" />
-        <img alt="alt" src={Pic11} loading="eager" height="450" />
+        <img alt="alt" src={Pic08} loading="eager" height="400" />
+        <img alt="alt" src={Pic02} loading="eager" height="400" />
+        <img alt="alt" src={Pic03} loading="eager" height="400" width="300" />
+        <img alt="alt" src={Pic04} loading="eager" height="400" width="300" />
+        <img alt="alt" src={Pic06} loading="eager" height="400" width="300" />
+        <img alt="alt" src={Pic07} loading="eager" height="400" width="300" />
+        <img alt="alt" src={Pic05} loading="eager" height="400" width="300" />
+        <img alt="alt" src={Pic09} loading="eager" height="400" width="300" />
+        <img alt="alt" src={Pic10} loading="eager" height="400" width="300" />
+        <img alt="alt" src={Pic11} loading="eager" height="400" />
       </S.GalleryContainer>
     </S.Gallery>
   );
