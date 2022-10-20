@@ -6,7 +6,8 @@ import scrollTo from "gatsby-plugin-smoothscroll";
 
 const IndexPage = () => {
   const [showPreloader, setShowPreloader] = useState(true);
-  const loaded = localStorage.getItem("preloader");
+  const loaded =
+    typeof window !== "undefined" ? localStorage.getItem("preloader") : null;
 
   useEffect(() => {
     setTimeout(() => {
