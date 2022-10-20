@@ -2,10 +2,8 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
-export const Navigation = styled.nav<{ sticky: boolean }>`
+export const Navigation = styled.nav<{ sticky: boolean; $mobileMenu: boolean }>`
   position: absolute;
-  transition: background-color 0.2s ease, border-top-left-radius 0.2s ease,
-    border-top-right-radius 0.2s ease, padding 0.2s ease;
   background-color: var(--primary);
   color: #ffffff;
   width: inherit;
@@ -33,17 +31,82 @@ export const Navigation = styled.nav<{ sticky: boolean }>`
           }
          `;
     }
-  }}
+  }};
+
+  @media only screen and (max-width: 600px) {
+    padding: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 `;
 
-export const NavigationContainer = styled.div`
+export const NavigationMobile = styled.div<{ $mobileMenu: boolean }>`
+  background-color: var(--primary);
+  color: #ffffff;
+  width: inherit;
+  padding: 1em;
+  cursor: default;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  z-index: 999;
+
+  @media only screen and (max-width: 600px) {
+    ${(props) => {
+      switch (props.$mobileMenu) {
+        case true:
+          return `
+          margin-top: 15px;
+          display: flex;
+          flex-direction: column;
+             height: 100vh;
+             position: fixed;
+             right: -35vw;
+             width: 100%;
+             max-width: 220px;
+             transform: translatex(-35vw);
+             transition: transform 0.4s ease-in-out;
+         `;
+        case false:
+          return `
+          margin-top: 15px;
+          display: flex;
+          flex-direction: column;
+          height: 100vh;
+          position: fixed;
+          right: -35vw;
+          width: 35vw;
+          transform: translatex(35vw);
+          transition: transform 0.4s ease-in-out;`;
+      }
+    }};
+  }
+`;
+
+export const NavigationContainer = styled.div<{ $mobileMenu: boolean }>`
   display: flex;
   justify-content: space-evenly;
   max-width: 70%;
   margin: auto;
+
+  @media only screen and (max-width: 600px) {
+    ${(props) => {
+      switch (props.$mobileMenu) {
+        case true:
+          return `
+          display: none;
+          // flex-direction: column;
+          // margin-top: 35px;
+          // max-width: 100%;
+         `;
+        case false:
+          return `
+          // width: 0;`;
+      }
+    }};
+  }
 `;
 
-export const NavLink = styled(Link)<{ active: string }>`
+export const NavLink = styled(Link)<{ active: string; $mobileMenu: boolean }>`
   text-decoration: none;
   transition: font-size 0.2s ease;
   display: inline-block;
@@ -61,9 +124,26 @@ export const NavLink = styled(Link)<{ active: string }>`
   &:hover {
     background: rgba(255, 255, 255, 0.3);
   }
+
+  @media only screen and (max-width: 600px) {
+    ${(props) => {
+      switch (props.$mobileMenu) {
+        case true:
+          return `
+          margin: 20px 0 0;
+         `;
+        case false:
+          return `
+          display: none`;
+      }
+    }};
+  }
 `;
 
-export const CustomAnchorLink = styled(AnchorLink)<{ active: string }>`
+export const CustomAnchorLink = styled(AnchorLink)<{
+  active: string;
+  $mobileMenu: boolean;
+}>`
   text-decoration: none;
   transition: font-size 0.2s ease;
   display: inline-block;
@@ -80,9 +160,34 @@ export const CustomAnchorLink = styled(AnchorLink)<{ active: string }>`
 
   &:hover {
     background: rgba(255, 255, 255, 0.3);
+  }
+
+  @media only screen and (max-width: 600px) {
+    ${(props) => {
+      switch (props.$mobileMenu) {
+        case true:
+          return `
+          margin: 15px 0 0;
+         `;
+        case false:
+          return `
+          display: none; `;
+      }
+    }};
   }
 `;
 
 export const List = styled.div`
   display: flex;
+`;
+
+export const Menubar = styled.img`
+  display: none;
+  @media only screen and (max-width: 600px) {
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 25px;
+    cursor: pointer;
+  }
 `;
