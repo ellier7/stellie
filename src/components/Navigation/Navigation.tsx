@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Scroll from "../Scroll/Scroll";
+import React, { useEffect, useState } from "react";
+import Menu from "../../assets/images/menu-icon.svg";
 import * as S from "./Navigation.styled";
 
 type NavigationProps = {
@@ -9,12 +9,39 @@ type NavigationProps = {
 type menuLinkProps = {
   active: boolean;
   href: string;
+  mobileMenu: boolean;
   name: string;
   onClick: () => void;
   type?: string;
 };
 
 const Navigation = ({ sticky }: NavigationProps) => {
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const toggleMobileMenu = () => {
+    setMobileMenu(!mobileMenu);
+  };
+
+  return (
+    <>
+      <S.Navigation id="nav" sticky={sticky} $mobileMenu={mobileMenu}>
+        <S.Menubar src={Menu} height="20" onClick={toggleMobileMenu} />
+        <S.NavigationContainer $mobileMenu={mobileMenu}>
+          <MenuLinks toggle={mobileMenu} />
+        </S.NavigationContainer>
+      </S.Navigation>
+      <NavigationMobile toggle={mobileMenu} />
+    </>
+  );
+};
+const NavigationMobile = (toggle: { toggle: boolean }) => {
+  useEffect(() => {}, [toggle]);
+  return (
+    <S.NavigationMobile $mobileMenu={toggle.toggle}>
+      <MenuLinks toggle={toggle.toggle} />
+    </S.NavigationMobile>
+  );
+};
+const MenuLinks = (toggle: { toggle: boolean }) => {
   const [active, setActive] = useState("home");
 
   const menuLinks = [
@@ -56,44 +83,43 @@ const Navigation = ({ sticky }: NavigationProps) => {
   ];
 
   return (
-    <S.Navigation id="nav" sticky={sticky}>
-      <S.NavigationContainer>
-        {/* <Scrollspy
-        items={['intro', 'first', 'second', 'cta']}
-        currentClassName="is-active"
-        offset={-300}
-      > */}
-
-        {menuLinks.map((menu) => {
-          if (menu.type === "anchorLink") {
-            return (
-              <AnchorLink
-                active={menu.active}
-                href={menu.href}
-                key={menu.name}
-                name={menu.name}
-                onClick={menu.onClick}
-                type={menu.type}
-              />
-            );
-          }
+    <>
+      {menuLinks.map((menu) => {
+        if (menu.type === "anchorLink") {
           return (
-            <Link
+            <AnchorLink
               active={menu.active}
               href={menu.href}
               key={menu.name}
               name={menu.name}
               onClick={menu.onClick}
               type={menu.type}
+              mobileMenu={toggle.toggle}
             />
           );
-        })}
-      </S.NavigationContainer>
-    </S.Navigation>
+        }
+        return (
+          <Link
+            active={menu.active}
+            href={menu.href}
+            key={menu.name}
+            name={menu.name}
+            onClick={menu.onClick}
+            type={menu.type}
+            mobileMenu={toggle.toggle}
+          />
+        );
+      })}
+    </>
   );
 };
-
-const AnchorLink = ({ href, name, active, onClick }: menuLinkProps) => {
+const AnchorLink = ({
+  href,
+  name,
+  active,
+  onClick,
+  mobileMenu,
+}: menuLinkProps) => {
   return (
     <S.CustomAnchorLink
       to={href}
@@ -101,13 +127,14 @@ const AnchorLink = ({ href, name, active, onClick }: menuLinkProps) => {
       key={name}
       active={active.toString()}
       onAnchorLinkClick={onClick}
+      $mobileMenu={mobileMenu}
     >
       <S.List>{name}</S.List>
     </S.CustomAnchorLink>
   );
 };
 
-const Link = ({ href, name, active, onClick }: menuLinkProps) => {
+const Link = ({ href, name, active, onClick, mobileMenu }: menuLinkProps) => {
   return (
     <S.NavLink
       to={href}
@@ -115,6 +142,7 @@ const Link = ({ href, name, active, onClick }: menuLinkProps) => {
       key={name}
       active={active.toString()}
       onClick={onClick}
+      $mobileMenu={mobileMenu}
     >
       <S.List>{name}</S.List>
     </S.NavLink>
