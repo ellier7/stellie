@@ -5,7 +5,8 @@ export const Gallery = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 20px 0px;
+  margin: 0 auto;
+  max-width: 1400px;
 
   @media (max-width: 600px) {
     & img {
@@ -44,4 +45,8 @@ export const GalleryContainer = styled.div`
 
 export const Spacer = styled.div`
   padding-top: 100px;
+`;
+
+export const Spacer_Small = styled.div`
+  padding-top: 30px;
 `;

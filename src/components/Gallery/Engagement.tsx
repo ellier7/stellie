@@ -62,6 +62,7 @@ const Engagement = () => {
         <img src={EPic28} height="450" />
         <img src={EPic29} height="450" />
       </S.GalleryContainer>
+      <S.Spacer_Small></S.Spacer_Small>
       <img src={EPic30} height="800" />
       <S.Spacer></S.Spacer>
     </S.Gallery>
