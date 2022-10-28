@@ -18,7 +18,9 @@ const IndexPage = () => {
     scrollTo("#home");
   }, []);
 
-  return <>{showPreloader && !loaded ? <Preloader /> : <Homepage />}</>;
+  if (typeof window !== "undefined") {
+    return <>{showPreloader && !loaded ? <Preloader /> : <Homepage />}</>;
+  } else return <></>;
 };
 
 export default IndexPage;
