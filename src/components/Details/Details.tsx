@@ -14,12 +14,13 @@ const Details = () => {
           <S.DetailType>Ceremony</S.DetailType>
           <S.DetailTime>2:00PM</S.DetailTime>
           <S.DetailInfo>
-            Holy Trinity St. Nicholas Greek Orthodox Church
+            St. George Greek <br />
+            Orthodox Church
           </S.DetailInfo>
           <S.DetailAddress>
-            1641 Richmond Ave
+            1101 River Rd
             <br />
-            Staten Island, NY 10314
+            Piscataway, NJ 08854
           </S.DetailAddress>
         </div>
         <div>

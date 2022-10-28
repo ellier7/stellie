@@ -44,7 +44,8 @@ const Timeline = () => {
       image: TimelinePic3,
       header: "he asked, she said yes!",
       date: "03/19/22",
-      text: "Isabella Stewart Gardner Museum. Ellie was so shocked (and hysterically crying) and couldn't respond until Stelio said 'this is when you say yes!!'",
+      text1: "@ Isabella Stewart Gardner Museum",
+      text: "Ellie was so shocked (+ hysterically crying) and couldn't respond until Stelio said 'this is when you say yes!!'",
       order: "odd",
     },
     {
@@ -86,6 +87,7 @@ const Timeline = () => {
                   <S.TimelineText float={item.float}>
                     <span>{item.header}</span>
                     <span>{item.date}</span>
+                    <span>{item.text1 ?? ""}</span>
                     <span>{item.text}</span>
                   </S.TimelineText>
                 </S.TimelineContent>

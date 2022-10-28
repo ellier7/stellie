@@ -209,6 +209,12 @@ export const TimelineText = styled.div<{ float: string }>`
   }
 
   & span:nth-child(3) {
+    font-size: 12px;
+    opacity: 0.8;
+    font-style: italic;
+  }
+
+  & span:nth-child(4) {
     font-size: 14px;
     opacity: 0.8;
   }
