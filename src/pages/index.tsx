@@ -14,8 +14,10 @@ const IndexPage = () => {
       setShowPreloader(false);
       localStorage.setItem("preloader", "true");
     }, 2700);
+  }, []);
 
-    scrollTo("#home");
+  useEffect(() => {
+    scrollTo("#nav");
   }, []);
 
   if (typeof window !== "undefined") {
