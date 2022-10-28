@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import type { HeadFC } from "gatsby";
 import Homepage from "../components/Homepage/Homepage";
 import Preloader from "../components/Preloader/Preloader";
@@ -9,7 +9,7 @@ const IndexPage = () => {
   const loaded =
     typeof window !== "undefined" ? localStorage.getItem("preloader") : null;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setTimeout(() => {
       setShowPreloader(false);
       localStorage.setItem("preloader", "true");
@@ -17,10 +17,6 @@ const IndexPage = () => {
 
     scrollTo("#home");
   }, []);
-
-  useEffect(() => {
-    console.log("loaded", loaded);
-  }, [loaded]);
 
   return <>{showPreloader && !loaded ? <Preloader /> : <Homepage />}</>;
 };
