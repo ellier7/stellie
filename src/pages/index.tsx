@@ -18,6 +18,10 @@ const IndexPage = () => {
     scrollTo("#home");
   }, []);
 
+  useEffect(() => {
+    console.log("loaded", loaded);
+  }, [loaded]);
+
   return <>{showPreloader && !loaded ? <Preloader /> : <Homepage />}</>;
 };
 
