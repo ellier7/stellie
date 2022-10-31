@@ -53,6 +53,20 @@ const Details = () => {
           </S.DetailAddress>
         </div>
       </S.DetailsContainer>
+
+      <S.RecoveryBreakfast>
+        <span>
+          {" "}
+          Join us on Sunday 10/29/2023 <br />
+          for a Recovery Breakfast!
+        </span>
+        <span>9:30AM - 11:30AM</span>
+        <span>
+          Chateau Grande Events by David Burke
+          <br />
+          The Chateau Grande Hotel
+        </span>
+      </S.RecoveryBreakfast>
     </S.Details>
   );
 };

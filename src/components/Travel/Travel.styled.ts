@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Accomodations = styled.div`
+export const Travel = styled.div`
   width: 100%;
   padding: 50px;
   text-align: center;
@@ -10,7 +10,7 @@ export const Accomodations = styled.div`
   }
 `;
 
-export const AccomodationsContainer = styled.div`
+export const TravelContainer = styled.div`
   margin: 0px auto 30px;
   width: 70em;
   max-width: calc(100% - 4em);
@@ -24,14 +24,14 @@ export const AccomodationsContainer = styled.div`
   }
 `;
 
-export const AccomodationsHeader = styled.span`
+export const TravelHeader = styled.span`
   font-family: "Alex Brush", cursive;
   color: var(--primary);
   font-size: 50px;
   margin-bottom: 35px;
 `;
 
-export const AccomodationsType = styled.a`
+export const AccomodationsLink = styled.a`
   font-size: 35px;
   margin: 30px 0 20px;
   color: #000;
@@ -44,7 +44,7 @@ export const AccomodationsType = styled.a`
   }
 `;
 
-export const AccomodationsTypeSmall = styled.a`
+export const TravelTypeSmall = styled.a`
   font-weight: bold;
   margin-top: 18px;
   font-size: 22px;
@@ -57,7 +57,7 @@ export const AccomodationsTypeSmall = styled.a`
   }
 `;
 
-export const AccomodationsDetails = styled.div`
+export const TravelDetails = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,7 +75,7 @@ export const AccomodationsAddress = styled.p`
   font-size: 22px;
 `;
 
-export const AccomodationCode = styled.div`
+export const AccomodationsCode = styled.div`
   margin: 35px 0 0;
   font-style: italic;
   font-size: 25px;
@@ -89,27 +89,46 @@ export const AccomodationCode = styled.div`
   }
 `;
 
-export const RecoveryBreakfast = styled.div`
-  margin-top: 70px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--primary);
-  text-align: center;
+export const Spacer = styled.div`
+  margin-top: 50px;
+  border-top: 1px solid lightgray;
+  height: 50px;
+  width: 80%;
+`;
 
-  span:nth-child(1) {
-    font-size: 27px;
-    font-weight: bold;
-  }
+export const ShuttleName = styled.div`
+  font-size: 28px;
+  margin: 0px 0 30px;
+  color: #000;
+  line-height: 1;
+`;
 
-  span:nth-child(2) {
-    font-size: 24px;
-    line-height: 2.5;
-    font-weight: bold;
-  }
+export const Time = styled.span`
+  font-family: Helvetica, sans-serif;
+`;
 
-  span:nth-child(3) {
-    font-size: 16px;
-    opacity: 0.75;
+export const ShuttleInfo = styled.div`
+  font-size: 18px;
+`;
+
+export const HairLink = styled.a`
+  font-weight: bold;
+  margin-top: 0px;
+  font-size: 22px;
+  color: #000;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+
+  &:hover {
+    color: var(--primary);
   }
+`;
+
+export const Prices = styled.p`
+  font-size: 18px;
+`;
+
+export const SmallText = styled.p`
+  margin-top: 0;
+  font-size: 14px;
 `;

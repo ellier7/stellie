@@ -60,10 +60,10 @@ const MenuLinks = (toggle: { toggle: boolean }) => {
       type: "anchorLink",
     },
     {
-      active: active === "accomodations",
-      href: "/#accomodations",
-      name: "Accomodations",
-      onClick: () => setActive("accomodations"),
+      active: active === "travel",
+      href: "/#travel",
+      name: "Travel",
+      onClick: () => setActive("travel"),
       type: "anchorLink",
     },
     {
@@ -75,7 +75,7 @@ const MenuLinks = (toggle: { toggle: boolean }) => {
     },
     {
       active: active === "registry",
-      href: "/#home",
+      href: "/registry",
       name: "Registry",
       onClick: () => setActive("registry"),
       type: "link",

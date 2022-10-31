@@ -69,3 +69,28 @@ export const DetailAddress = styled.p`
   margin-top: 10px;
   font-size: 16px;
 `;
+
+export const RecoveryBreakfast = styled.div`
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary);
+  text-align: center;
+
+  span:nth-child(1) {
+    font-size: 27px;
+    font-weight: bold;
+  }
+
+  span:nth-child(2) {
+    font-size: 24px;
+    line-height: 2.5;
+    font-weight: bold;
+  }
+
+  span:nth-child(3) {
+    font-size: 16px;
+    opacity: 0.75;
+  }
+`;
