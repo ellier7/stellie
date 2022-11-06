@@ -2,8 +2,9 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `wedding-site`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "Stellie 10.28.23",
+    description: "wedding website",
+    author: "eroussopoulos",
   },
   graphqlTypegen: true,
   plugins: [
