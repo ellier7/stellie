@@ -2,7 +2,7 @@ import React from "react";
 import Bloomingdales from "../../assets/images/bloomingdales.png";
 import BBB from "../../assets/images/bbb.png";
 import Zola from "../../assets/images/zola.png";
-import Santa from "../../assets/images/santa.jpg";
+import Santa from "../../assets/images/secret-santa.jpg";
 import * as S from "./Registry.styled";
 
 const Registry = () => {
