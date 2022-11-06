@@ -2,6 +2,7 @@ import React from "react";
 import Bloomingdales from "../../assets/images/bloomingdales.png";
 import BBB from "../../assets/images/bbb.png";
 import Zola from "../../assets/images/zola.png";
+import Santa from "../../assets/images/santa.jpg";
 import * as S from "./Registry.styled";
 
 const Registry = () => {
@@ -19,6 +20,9 @@ const Registry = () => {
           <img src={Zola} width="100%" />
         </a>
       </S.RegistryContainer>
+      <S.Hide>
+        <img src={Santa} width="100%" />
+      </S.Hide>
     </S.Registry>
   );
 };

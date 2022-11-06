@@ -52,3 +52,7 @@ export const RegistryContainer = styled.div`
     } */
   }
 `;
+
+export const Hide = styled.div`
+  display: none;
+`;
