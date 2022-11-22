@@ -42,7 +42,19 @@ const NavigationMobile = (toggle: { toggle: boolean }) => {
   );
 };
 const MenuLinks = (toggle: { toggle: boolean }) => {
-  const [active, setActive] = useState("home");
+  const location = typeof window !== "undefined" ? window.location : null;
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    let activeRoute = "";
+    if (location?.hash) {
+      activeRoute = location?.hash.split("#")[1];
+    } else if (location?.pathname != "/") {
+      activeRoute = location?.pathname.split("/")[1] || "";
+    } else activeRoute = "home";
+
+    setActive(activeRoute);
+  }, []);
 
   const menuLinks = [
     {
@@ -50,7 +62,7 @@ const MenuLinks = (toggle: { toggle: boolean }) => {
       href: "/",
       name: "Home",
       onClick: () => setActive("home"),
-      type: "anchorLink",
+      type: "link",
     },
     {
       active: active === "details",
@@ -61,10 +73,10 @@ const MenuLinks = (toggle: { toggle: boolean }) => {
     },
     {
       active: active === "travel",
-      href: "/#travel",
+      href: "/travel",
       name: "Travel",
       onClick: () => setActive("travel"),
-      type: "anchorLink",
+      type: "link",
     },
     {
       active: active === "gallery",
@@ -125,7 +137,7 @@ const AnchorLink = ({
       to={href}
       title={name}
       key={name}
-      active={active.toString()}
+      $active={active.toString()}
       onAnchorLinkClick={onClick}
       $mobileMenu={mobileMenu}
     >
