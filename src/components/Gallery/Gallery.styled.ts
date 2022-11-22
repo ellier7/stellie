@@ -26,7 +26,7 @@ export const GalleryHeader = styled.div`
   font-family: "Alex Brush", cursive;
   color: var(--primary);
   font-size: 50px;
-  margin: 100px 0 0px;
+  margin: 50px 0 0px;
   line-height: 1;
 `;
 
@@ -44,7 +44,7 @@ export const GalleryContainer = styled.div`
 `;
 
 export const Spacer = styled.div`
-  padding-top: 100px;
+  padding-top: 50px;
 `;
 
 export const Spacer_Small = styled.div`

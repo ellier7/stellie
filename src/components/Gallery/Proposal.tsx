@@ -33,6 +33,7 @@ const Proposal = () => {
         <img alt="alt" src={Pic10} loading="eager" height="400" width="300" />
         <img alt="alt" src={Pic11} loading="eager" height="400" />
       </S.GalleryContainer>
+      <S.Spacer></S.Spacer>
     </S.Gallery>
   );
 };

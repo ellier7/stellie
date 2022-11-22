@@ -42,6 +42,7 @@ export const RegistryContainer = styled.div`
 
     a {
       width: 100%;
+      max-width: 300px;
     }
 
     /* a:not(:last-child) {

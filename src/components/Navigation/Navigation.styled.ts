@@ -118,6 +118,8 @@ export const NavLink = styled(Link)<{ active: string; $mobileMenu: boolean }>`
   box-shadow: inset 0 0 0 1px transparent;
   background: transparent;
   color: #fff;
+  ${(props) =>
+    props.active === "true" ? "background: rgba(255, 255, 255, 0.3);" : "null"};
   font-weight: ${(props) => (props.active === "true" ? "bold" : "normal")};
   transition: font-size 0.2s ease;
 
@@ -141,7 +143,7 @@ export const NavLink = styled(Link)<{ active: string; $mobileMenu: boolean }>`
 `;
 
 export const CustomAnchorLink = styled(AnchorLink)<{
-  active: string;
+  $active: string;
   $mobileMenu: boolean;
 }>`
   text-decoration: none;
@@ -155,7 +157,11 @@ export const CustomAnchorLink = styled(AnchorLink)<{
   box-shadow: inset 0 0 0 1px transparent;
   background: transparent;
   color: #fff;
-  font-weight: ${(props) => (props.active === "true" ? "bold" : "normal")};
+  ${(props) =>
+    props.$active === "true"
+      ? "background: rgba(255, 255, 255, 0.3);"
+      : "null"};
+  font-weight: ${(props) => (props.$active === "true" ? "bold" : "normal")};
   transition: font-size 0.2s ease;
 
   &:hover {

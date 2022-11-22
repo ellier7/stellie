@@ -91,6 +91,7 @@ export const FirstName = styled.div`
   font-family: "Playfair Display", serif;
   font-size: 30px;
   color: var(--primary);
+  padding: 0 20px;
 `;
 
 export const BrideGroom = styled.div`

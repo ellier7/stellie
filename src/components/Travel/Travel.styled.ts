@@ -128,7 +128,7 @@ export const Prices = styled.p`
   font-size: 18px;
 `;
 
-export const SmallText = styled.p`
+export const SmallText = styled.div`
   margin-top: 0;
   font-size: 14px;
 `;
