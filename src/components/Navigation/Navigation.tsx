@@ -29,19 +29,32 @@ const Navigation = ({ sticky }: NavigationProps) => {
           <MenuLinks toggle={mobileMenu} />
         </S.NavigationContainer>
       </S.Navigation>
-      <NavigationMobile toggle={mobileMenu} />
+      <NavigationMobile toggle={mobileMenu} onClick={toggleMobileMenu} />
     </>
   );
 };
-const NavigationMobile = (toggle: { toggle: boolean }) => {
-  useEffect(() => {}, [toggle]);
+
+const NavigationMobile = ({
+  toggle,
+  onClick = () => {},
+}: {
+  toggle: boolean;
+  onClick?: () => void;
+}) => {
   return (
-    <S.NavigationMobile $mobileMenu={toggle.toggle}>
-      <MenuLinks toggle={toggle.toggle} />
+    <S.NavigationMobile $mobileMenu={toggle}>
+      <MenuLinks toggle={toggle} onClick={onClick} />
     </S.NavigationMobile>
   );
 };
-const MenuLinks = (toggle: { toggle: boolean }) => {
+
+const MenuLinks = ({
+  toggle,
+  onClick = () => {},
+}: {
+  toggle: boolean;
+  onClick?: () => void;
+}) => {
   const location = typeof window !== "undefined" ? window.location : null;
   const [active, setActive] = useState("");
 
@@ -104,9 +117,12 @@ const MenuLinks = (toggle: { toggle: boolean }) => {
               href={menu.href}
               key={menu.name}
               name={menu.name}
-              onClick={menu.onClick}
+              onClick={() => {
+                menu.onClick;
+                onClick();
+              }}
               type={menu.type}
-              mobileMenu={toggle.toggle}
+              mobileMenu={toggle}
             />
           );
         }
@@ -116,9 +132,12 @@ const MenuLinks = (toggle: { toggle: boolean }) => {
             href={menu.href}
             key={menu.name}
             name={menu.name}
-            onClick={menu.onClick}
+            onClick={() => {
+              menu.onClick;
+              onClick();
+            }}
             type={menu.type}
-            mobileMenu={toggle.toggle}
+            mobileMenu={toggle}
           />
         );
       })}
