@@ -4,8 +4,8 @@ import * as S from "./Travel.styled";
 
 const Travel = () => {
   return (
-    <S.Travel id="travel">
-      <S.TravelContainer id="travel">
+    <S.Travel>
+      <S.TravelContainer>
         <S.TravelHeader>Accomodations</S.TravelHeader>
         <S.TravelDetails>
           <img src={Hotel} width="700" />

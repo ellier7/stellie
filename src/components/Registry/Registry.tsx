@@ -8,21 +8,20 @@ import * as S from "./Registry.styled";
 const Registry = () => {
   return (
     <S.Registry>
-      <S.RegistryHeader>Registry</S.RegistryHeader>
       <S.RegistryContainer>
-        <a href="https://www.bedbathandbeyond.com/" target="_blank">
-          <img src={BBB} width="100%" />
-        </a>
-        <a href="https://www.bloomingdales.com" target="_blank">
-          <img src={Bloomingdales} width="100%" />
-        </a>
-        <a href="https://www.zola.com" target="_blank">
-          <img src={Zola} width="100%" />
-        </a>
+        <S.RegistryHeader>Registry</S.RegistryHeader>
+        <S.RegistryDetails>
+          <a href="https://www.bedbathandbeyond.com/" target="_blank">
+            <img src={BBB} width="100%" />
+          </a>
+          <a href="https://www.bloomingdales.com" target="_blank">
+            <img src={Bloomingdales} width="100%" />
+          </a>
+          <a href="https://www.zola.com" target="_blank">
+            <img src={Zola} width="100%" />
+          </a>
+        </S.RegistryDetails>
       </S.RegistryContainer>
-      <S.Hide>
-        <img src={Santa} width="100%" />
-      </S.Hide>
     </S.Registry>
   );
 };

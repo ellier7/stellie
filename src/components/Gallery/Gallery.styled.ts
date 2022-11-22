@@ -9,6 +9,8 @@ export const Gallery = styled.div`
   max-width: 1400px;
 
   @media (max-width: 600px) {
+    padding-top: 25px;
+
     & img {
       max-width: calc(100vw - 40px);
       height: 100%;

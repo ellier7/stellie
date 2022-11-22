@@ -6,7 +6,7 @@ export const Travel = styled.div`
   text-align: center;
 
   @media only screen and (max-width: 600px) {
-    padding: 30px;
+    padding: 75px 30px 20px;
   }
 `;
 

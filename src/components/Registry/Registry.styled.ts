@@ -1,24 +1,37 @@
 import styled from "styled-components";
 
+export const Registry = styled.div`
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+
+  @media only screen and (max-width: 600px) {
+    padding: 75px 30px 20px;
+  }
+`;
+
+export const RegistryContainer = styled.div`
+  margin: 0px auto 30px;
+  width: 70em;
+  max-width: calc(100% - 4em);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    max-width: 100%;
+  }
+`;
+
 export const RegistryHeader = styled.span`
   font-family: "Alex Brush", cursive;
   color: var(--primary);
   font-size: 50px;
 `;
 
-export const Registry = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 50px auto;
-  max-width: 1400px;
-`;
-
-export const RegistryContainer = styled.div`
-  margin: 100px auto 30px;
-  width: 70em;
-  max-width: calc(100% - 6em);
+export const RegistryDetails = styled.div`
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
 
