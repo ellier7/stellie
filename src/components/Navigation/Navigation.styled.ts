@@ -41,42 +41,42 @@ export const Navigation = styled.nav<{ sticky: boolean; $mobileMenu: boolean }>`
 `;
 
 export const NavigationMobile = styled.div<{ $mobileMenu: boolean }>`
+  /* width: inherit;
+  
+  
+  z-index: 999;
+ */
+
+  top: 0;
+  right: -220px;
+  overflow: hidden;
   background-color: var(--primary);
   color: #ffffff;
-  width: inherit;
-  padding: 1em;
   cursor: default;
   text-align: center;
   font-family: "Playfair Display", serif;
-  z-index: 999;
+  padding: 1em;
+  box-shadow: 5px 5px 10px grey;
+  position: absolute;
+  z-index: 11;
+  opacity: 0;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  width: 220px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
 
   @media only screen and (max-width: 600px) {
     ${(props) => {
       switch (props.$mobileMenu) {
         case true:
           return `
-          margin-top: 15px;
-          display: flex;
-          flex-direction: column;
-             height: 100vh;
-             position: fixed;
-             right: -35vw;
-             width: 100%;
-             max-width: 220px;
-             transform: translatex(-35vw);
-             transition: transform 0.4s ease-in-out;
+          opacity: 1;
+          right: 0;
          `;
-        case false:
-          return `
-          margin-top: 15px;
-          display: flex;
-          flex-direction: column;
-          height: 100vh;
-          position: fixed;
-          right: -35vw;
-          width: 35vw;
-          transform: translatex(35vw);
-          transition: transform 0.4s ease-in-out;`;
       }
     }};
   }
