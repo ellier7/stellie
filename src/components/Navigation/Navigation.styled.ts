@@ -41,33 +41,26 @@ export const Navigation = styled.nav<{ sticky: boolean; $mobileMenu: boolean }>`
 `;
 
 export const NavigationMobile = styled.div<{ $mobileMenu: boolean }>`
-  /* width: inherit;
-  
-  
-  z-index: 999;
- */
-
+  width: 220px;
+  height: 100%;
   top: 0;
   right: -220px;
-  overflow: hidden;
   background-color: var(--primary);
   color: #ffffff;
   cursor: default;
   text-align: center;
   font-family: "Playfair Display", serif;
   padding: 1em;
-  box-shadow: 5px 5px 10px grey;
-  position: absolute;
-  z-index: 11;
-  opacity: 0;
-  transition: all 0.25s;
-  -webkit-transition: all 0.25s;
-  width: 220px;
   margin-top: 15px;
   display: flex;
   flex-direction: column;
   height: 100vh;
   position: fixed;
+  box-shadow: 5px 5px 10px grey;
+  z-index: 11;
+  opacity: 0;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
 
   @media only screen and (max-width: 600px) {
     ${(props) => {
