@@ -13,7 +13,7 @@ export const Gallery = styled.div`
 
     & img {
       max-width: calc(100vw - 40px);
-      height: 100%;
+      height: auto !important;
     }
   }
 `;
