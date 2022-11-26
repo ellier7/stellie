@@ -66,8 +66,12 @@ const Travel = () => {
           Bliss Salon
         </S.HairLink>
         <S.SmallText>
-          *Preferred Vendor of the Park Chateatu <br />
-          Appointments must be made at The Chateau Grande Hotel
+          <i>
+            *Preferred vendor of the Park Chateatu for guests staying at The
+            Chateau Grande Hotel
+          </i>
+          <br /> Appointments must be made on site. <br />
+          Please call in advance to book your appointment.
           <S.Prices>
             Updo $200+
             <br />

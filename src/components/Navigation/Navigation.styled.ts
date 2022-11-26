@@ -8,8 +8,6 @@ export const Navigation = styled.nav<{ sticky: boolean; $mobileMenu: boolean }>`
   color: #ffffff;
   width: inherit;
   padding: 1em;
-  border-top-left-radius: 0.25em;
-  border-top-right-radius: 0.25em;
   cursor: default;
   text-align: center;
   font-family: "Playfair Display", serif;
