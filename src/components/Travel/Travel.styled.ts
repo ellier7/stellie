@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Travel = styled.div`
   width: 100%;
-  padding: 50px;
+  padding: 100px 50px 50px;
   text-align: center;
 
   @media only screen and (max-width: 600px) {
@@ -11,7 +11,7 @@ export const Travel = styled.div`
 `;
 
 export const TravelContainer = styled.div`
-  margin: 0px auto 30px;
+  margin: 0px auto;
   width: 70em;
   max-width: calc(100% - 4em);
   display: flex;
@@ -129,6 +129,7 @@ export const Prices = styled.p`
 `;
 
 export const SmallText = styled.div`
-  margin-top: 0;
-  font-size: 14px;
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.3;
 `;

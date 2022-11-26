@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Registry = styled.div`
   width: 100%;
-  padding: 50px;
+  padding: 100px 50px 50px;
   text-align: center;
 
   @media only screen and (max-width: 600px) {
@@ -11,9 +11,8 @@ export const Registry = styled.div`
 `;
 
 export const RegistryContainer = styled.div`
-  margin: 0px auto 30px;
-  width: 70em;
-  max-width: calc(100% - 4em);
+  margin: 0px auto;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,11 +32,11 @@ export const RegistryHeader = styled.span`
 export const RegistryDetails = styled.div`
   margin-top: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   a {
     flex: 0 0 auto;
-    margin: 0 15px;
+    margin: 0 40px;
     padding: 20px 0;
     width: 20%;
     display: flex;
@@ -56,6 +55,15 @@ export const RegistryDetails = styled.div`
     a {
       width: 100%;
       max-width: 300px;
+      border: none;
+
+      &:nth-child(1) {
+        border-bottom: 1px solid lightgray;
+      }
+
+      img {
+        max-width: 200px;
+      }
     }
 
     /* a:not(:last-child) {

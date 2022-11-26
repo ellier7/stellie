@@ -11,9 +11,6 @@ const Registry = () => {
       <S.RegistryContainer>
         <S.RegistryHeader>Registry</S.RegistryHeader>
         <S.RegistryDetails>
-          <a href="https://www.bedbathandbeyond.com/" target="_blank">
-            <img src={BBB} width="100%" />
-          </a>
           <a href="https://www.bloomingdales.com" target="_blank">
             <img src={Bloomingdales} width="100%" />
           </a>

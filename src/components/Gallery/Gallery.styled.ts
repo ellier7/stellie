@@ -28,8 +28,12 @@ export const GalleryHeader = styled.div`
   font-family: "Alex Brush", cursive;
   color: var(--primary);
   font-size: 50px;
-  margin: 50px 0 0px;
+  margin-top: 100px;
   line-height: 1;
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 50px;
+  }
 `;
 
 export const GalleryInfo = styled.p`
