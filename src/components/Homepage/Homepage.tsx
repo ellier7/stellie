@@ -18,7 +18,6 @@ const Homepage = () => {
         <Portraits />
         <Timeline />
       </S.MaxWidth>
-      <Details />
     </Layout>
   );
 };

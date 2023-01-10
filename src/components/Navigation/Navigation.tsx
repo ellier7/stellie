@@ -79,10 +79,10 @@ const MenuLinks = ({
     },
     {
       active: active === "details",
-      href: "/#details",
+      href: "/details",
       name: "Details",
       onClick: () => setActive("details"),
-      type: "anchorLink",
+      type: "link",
     },
     {
       active: active === "travel",
@@ -98,13 +98,13 @@ const MenuLinks = ({
       onClick: () => setActive("gallery"),
       type: "link",
     },
-    {
-      active: active === "registry",
-      href: "/registry",
-      name: "Registry",
-      onClick: () => setActive("registry"),
-      type: "link",
-    },
+    // {
+    //   active: active === "registry",
+    //   href: "/registry",
+    //   name: "Registry",
+    //   onClick: () => setActive("registry"),
+    //   type: "link",
+    // },
   ];
 
   return (

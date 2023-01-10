@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Details = styled.div`
-  background: #f8f8f8;
+  background: #ffffff;
   width: 100%;
   padding: 100px 50px;
   text-align: center;
