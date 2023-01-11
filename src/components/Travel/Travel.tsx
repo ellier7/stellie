@@ -70,7 +70,7 @@ const Travel = () => {
             *Preferred vendor of the Park Chateatu for guests staying at The
             Chateau Grande Hotel
           </i>
-          <br /> Appointments must be made on site. <br />
+          <br /> Appointments must be made for on site only. <br />
           Please call in advance to book your appointment.
           <S.Prices>
             Updo $200+

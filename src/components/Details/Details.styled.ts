@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Flex = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const Details = styled.div`
   background: #ffffff;
   width: 100%;
@@ -48,6 +53,14 @@ export const DetailsHeader = styled.span`
   font-family: "Alex Brush", cursive;
   color: var(--primary);
   font-size: 50px;
+  line-height: 1;
+`;
+
+export const DetailsSubHeader = styled.span`
+  color: var(--primary);
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 20px;
 `;
 
 export const DetailType = styled.p`
@@ -71,7 +84,7 @@ export const DetailAddress = styled.p`
 `;
 
 export const RecoveryBreakfast = styled.div`
-  margin-top: 70px;
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
