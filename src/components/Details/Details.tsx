@@ -7,7 +7,10 @@ import * as S from "./Details.styled";
 const Details = () => {
   return (
     <S.Details id="details">
-      <S.DetailsHeader>Wedding Day Details</S.DetailsHeader>
+      <S.Flex>
+        <S.DetailsHeader>Wedding Day Details</S.DetailsHeader>
+        <S.DetailsSubHeader>10.28.23</S.DetailsSubHeader>
+      </S.Flex>
       <S.DetailsContainer>
         <div>
           <img src={Church} height="70px" />

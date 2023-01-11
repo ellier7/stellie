@@ -17,8 +17,9 @@ const Hero = () => {
             target="_blank"
             rel="noreferrer"
           >
-            Park Chateau
+            Park Chateau <br />
           </S.Location>
+          <S.LocationState>New Jersey</S.LocationState>
         </S.HeroText>
       </S.Hero>
     </>

@@ -86,8 +86,8 @@ export const Names = styled.div`
 export const Location = styled.a`
   font-family: "Pinyon Script", cursive;
   letter-spacing: 1.5px;
-  margin-top: 5px;
-  font-size: 25px;
+  margin-top: 15px;
+  font-size: 35px;
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
@@ -97,6 +97,13 @@ export const Location = styled.a`
     color: #ffffff;
     font-weight: 800;
   }
+`;
+
+export const LocationState = styled.span`
+  font-size: 15px;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
 `;
 
 export const Month = styled.div``;
