@@ -39,7 +39,27 @@ export const GalleryHeader = styled.div`
 export const GalleryInfo = styled.p`
   font-size: 18px;
   line-height: 1;
-  margin: 0 0 20px;
+  margin: 0 0 15px;
+`;
+
+export const Photographer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  & a,
+  a:visited {
+    font-size: 14px;
+    color: #000;
+    margin-left: 7px;
+  }
+
+  @media (max-width: 600px) {
+    & img {
+      max-width: 18px;
+      height: 18px;
+    }
+  }
 `;
 
 export const GalleryContainer = styled.div`

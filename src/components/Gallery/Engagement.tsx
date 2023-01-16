@@ -26,6 +26,7 @@ import EPic27 from "../../assets/images/gallery/engagement/Ellie&Stelios_Engagem
 import EPic28 from "../../assets/images/gallery/engagement/Ellie&Stelios_EngagementSession-28.jpg";
 import EPic29 from "../../assets/images/gallery/engagement/Ellie&Stelios_EngagementSession-29.jpg";
 import EPic30 from "../../assets/images/gallery/engagement/Ellie&Stelios_EngagementSession-30.jpg";
+import Camera from "../../assets/images/camera.svg";
 
 import * as S from "./Gallery.styled";
 
@@ -34,6 +35,15 @@ const Engagement = () => {
     <S.Gallery>
       <S.GalleryHeader>Engagement Shoot</S.GalleryHeader>
       <S.GalleryInfo>Nemours Estate, Wilmington DE</S.GalleryInfo>
+      <S.Photographer>
+        <img src={Camera} height="18px" />
+        <a
+          href="https://www.instagram.com/julianatomlinsonphotography/"
+          target="_blank"
+        >
+          @julianatomlinsonphotography
+        </a>
+      </S.Photographer>
       <S.GalleryContainer>
         <img src={EPic01} height="450" />
         <img src={EPic02} height="450" />

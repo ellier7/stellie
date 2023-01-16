@@ -9,7 +9,6 @@ body {
   --border-size: 1px;
   --vertical-offset: calc(var(--offset) * -1);
   --horizontal-offset: calc(var(--offset) * -1);
-
   --primary: #548565;
 }
 
