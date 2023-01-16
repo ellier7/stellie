@@ -54,6 +54,10 @@ export const Photographer = styled.div`
     margin-left: 7px;
   }
 
+  & a:hover {
+    color: var(--primary);
+  }
+
   @media (max-width: 600px) {
     & img {
       max-width: 18px;
