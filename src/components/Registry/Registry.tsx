@@ -10,14 +10,22 @@ const Registry = () => {
     <S.Registry>
       <S.RegistryContainer>
         <S.RegistryHeader>Registry</S.RegistryHeader>
+        <S.RegistrySubHeader>We are registered at:</S.RegistrySubHeader>
         <S.RegistryDetails>
-          <a href="https://www.bloomingdales.com" target="_blank">
+          <a
+            href="https://www.bloomingdales.com/registry/wedding/guest/ELLIE-ROUSSOPOULOS-STELIOS-ANAGNOSTOPOULOS/?registryId=7391959"
+            target="_blank"
+          >
             <img src={Bloomingdales} width="100%" />
           </a>
-          <a href="https://www.zola.com" target="_blank">
+          <a href="https://www.zola.com/registry/stellie" target="_blank">
             <img src={Zola} width="100%" />
           </a>
         </S.RegistryDetails>
+        <S.ZolaWarning>
+          *If using Zola, please do not forget to go back to our registry & mark
+          the item as purchased.
+        </S.ZolaWarning>
       </S.RegistryContainer>
     </S.Registry>
   );
