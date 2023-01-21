@@ -98,13 +98,13 @@ const MenuLinks = ({
       onClick: () => setActive("gallery"),
       type: "link",
     },
-    // {
-    //   active: active === "registry",
-    //   href: "/registry",
-    //   name: "Registry",
-    //   onClick: () => setActive("registry"),
-    //   type: "link",
-    // },
+    {
+      active: active === "registry",
+      href: "/registry",
+      name: "Registry",
+      onClick: () => setActive("registry"),
+      type: "link",
+    },
   ];
 
   return (
