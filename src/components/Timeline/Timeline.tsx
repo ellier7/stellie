@@ -22,7 +22,7 @@ const Timeline = () => {
       image: TimelinePic1,
       header: "it's a match!",
       date: "03/25/20",
-      text: '"Stelio lost his independence on the day Greece gain it."',
+      text: '"Stelio lost his independence on the day Greece gained it."',
       order: "odd",
     },
     {
