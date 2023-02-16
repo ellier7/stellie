@@ -35,7 +35,7 @@ const Travel = () => {
             Book a room now!
           </S.TravelTypeSmall>
         </S.TravelDetails>
-        <S.Spacer></S.Spacer>
+        {/* <S.Spacer></S.Spacer>
         <S.TravelHeader>Shuttle Services</S.TravelHeader>
         <S.ShuttleName>
           October 28, 2023 <br />
@@ -46,7 +46,7 @@ const Travel = () => {
           George Church. <br />
           The shuttles will be leaving the hotel promptly at{" "}
           <S.Time>1:00</S.Time>pm.
-        </S.ShuttleInfo>
+        </S.ShuttleInfo> */}
         <S.Spacer></S.Spacer>
         <S.TravelHeader>Hair & Makeup</S.TravelHeader>
         <S.HairLink
