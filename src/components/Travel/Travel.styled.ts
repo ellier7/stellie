@@ -89,6 +89,13 @@ export const AccomodationsCode = styled.div`
   }
 `;
 
+export const AccomodationsError = styled.div`
+  font-size: 14px;
+  line-height: 1.2;
+  max-width: 400px;
+  margin-top: 10px;
+`;
+
 export const Spacer = styled.div`
   margin-top: 50px;
   border-top: 1px solid lightgray;

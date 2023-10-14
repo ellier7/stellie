@@ -43,7 +43,7 @@ const Details = () => {
         <div>
           <img src={WeddingCake} height="70px" />
           <S.DetailType>Reception</S.DetailType>
-          <S.DetailTime>7:30PM - 12:00AM</S.DetailTime>
+          <S.DetailTime>7:30PM - 12:30AM</S.DetailTime>
           <S.DetailInfo>
             Park Chateau
             <br />
