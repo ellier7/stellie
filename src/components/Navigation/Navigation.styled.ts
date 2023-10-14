@@ -55,7 +55,7 @@ export const NavigationMobile = styled.div<{ $mobileMenu: boolean }>`
   height: 100vh;
   position: fixed;
   box-shadow: 5px 5px 10px grey;
-  z-index: 11;
+  z-index: 200;
   opacity: 0;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
