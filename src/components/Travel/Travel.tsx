@@ -37,7 +37,7 @@ const Travel = () => {
           <S.AccomodationsError>
             **If there are no rooms available using code ROUNA, please call the
             hotel at <a href="tel:(732) 724-4600">(732) 724-4600</a> and tell
-            them you are part of Roussopoulos/Anagnstopoulos Wedding.
+            them you are part of the Roussopoulos/Anagnostopoulos Wedding.
           </S.AccomodationsError>
         </S.TravelDetails>
         {/* <S.Spacer></S.Spacer>
